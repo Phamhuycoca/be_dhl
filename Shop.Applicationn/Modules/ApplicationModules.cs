@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
+using Shop.Applicationn.IServices;
 using Shop.Applicationn.Mapping;
 using Shop.Applicationn.Services;
 using Shop.Infrastructure.Modules;
@@ -22,9 +23,14 @@ namespace Shop.Applicationn.Modules
             });
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
-            services.AddScoped<ICategoryService, CategoryService>();
-            services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IDepartmentService, DepartmentService>();
+            services.AddScoped<IUserServcie, UserService>();
+            services.AddScoped<INewsService, NewsService>();
+            services.AddScoped<INewsContentService, NewsContentService>();
+            services.AddScoped<IImageNewsService, ImageNewsService>();
+            services.AddScoped<IPostService, PostService>();
+            services.AddScoped<IImagePostService, ImagePostService>();
+            services.AddScoped<INotiService, NotiService>();
             return services;
         }    
     }

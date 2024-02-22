@@ -22,7 +22,7 @@ namespace Shop.Infrastructure.Repositories
         {
             return _dbSet.ToList();
         }
-        public T Get(int id)
+        public T GetById(int id)
         {
             return _dbSet.Find(id);
         }
@@ -38,11 +38,16 @@ namespace Shop.Infrastructure.Repositories
         }
         public bool Update(T entity)
         {
-            if (!_dbSet.Any(e => e == entity))
+            var entry = _context.Entry(entity);
+            if (entry.State == EntityState.Detached)
             {
-                return false;
+                var existingEntity = _dbSet.Find(GetKeyValues(entity).ToArray());
+                if (existingEntity == null)
+                {
+                    return false;
+                }
+                _context.Entry(existingEntity).CurrentValues.SetValues(entity);
             }
-            _context.Entry(entity).State = EntityState.Modified;
             try
             {
                 _context.SaveChanges();
@@ -52,6 +57,14 @@ namespace Shop.Infrastructure.Repositories
                 throw;
             }
             return true;
+        }
+        private IEnumerable<object> GetKeyValues(T entity)
+        {
+            var keyProperties = _context.Model.FindEntityType(typeof(T)).FindPrimaryKey().Properties;
+            foreach (var property in keyProperties)
+            {
+                yield return property.PropertyInfo.GetValue(entity);
+            }
         }
         public bool Delete(int id)
         {
@@ -63,6 +76,11 @@ namespace Shop.Infrastructure.Repositories
             _dbSet.Remove(category);
             _context.SaveChanges();
             return true;
+        }
+
+        public List<T> Search(string search)
+        {
+            return _dbSet.Where(x => x.ToString().Contains(search)).ToList();
         }
     }
 }

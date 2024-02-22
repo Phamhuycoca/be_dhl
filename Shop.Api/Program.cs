@@ -80,7 +80,11 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("user", policy => policy.RequireRole("user"));
+    options.AddPolicy("manager", policy => policy.RequireRole("manager"));
+});
 
 
 var app = builder.Build();
@@ -93,7 +97,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-
+app.UseFileServer();
+app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

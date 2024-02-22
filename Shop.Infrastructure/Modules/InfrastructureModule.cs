@@ -13,9 +13,14 @@ namespace Shop.Infrastructure.Modules
     {
         public static IServiceCollection AddInfrastructureModule(this IServiceCollection services)
         {
-            services.AddScoped<ICategoryRepo, CategoryRepo>();
-            services.AddScoped<IProductRepo, ProductRepo>();
+            services.AddScoped<IDepartmentRepo, DepartmentRepo>();
             services.AddScoped<IUserRepo, UserRepo>();
+            services.AddScoped<INewsRepo, NewsRepo>();
+            services.AddScoped<IImageNewsRepo, ImageNewsRepo>();
+            services.AddScoped<INewsContentRepo, NewsContentRepo>();
+            services.AddScoped<IPostRepo, PostRepo>();
+            services.AddScoped<IImagePostRepo, ImagePosRepo>();
+            services.AddScoped<INotiRepo, NotiRepo>();
             return services;
         }    
     }

@@ -13,9 +13,14 @@ namespace Shop.Applicationn.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<Category,CategoryDto>().ReverseMap();
-            CreateMap<Product,ProductDto>().ReverseMap();
+            CreateMap<Department,DepartmentDto>().ReverseMap();
             CreateMap<User,UserDto>().ReverseMap();
+            CreateMap<News,NewsDto>().ReverseMap();
+            CreateMap<NewsContent, NewsContentDto>().ReverseMap();
+            CreateMap<ImageNews, ImageNewsDto>().ReverseMap();
+            CreateMap<ImagePost, ImagePostDto>().ReverseMap();
+            CreateMap<Post, PostDto>().ReverseMap();
+            CreateMap<Notification, NotificationDto>().ReverseMap();
         }
     }
 }

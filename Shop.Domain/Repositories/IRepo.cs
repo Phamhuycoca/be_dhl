@@ -9,9 +9,10 @@ namespace Shop.Domain.Repositories
     public interface IRepo<T> where T:class,new ()
     {
         List<T> GetAll();
-        T Get(int id);
+        T GetById(int id);
         bool Add(T entity);
         bool Update(T entity);
         bool Delete(int id);
+        List<T> Search(string search);
     }
 }

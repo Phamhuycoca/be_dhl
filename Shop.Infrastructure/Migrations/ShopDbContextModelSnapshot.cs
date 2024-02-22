@@ -17,69 +17,188 @@ namespace Shop.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.12")
+                .HasAnnotation("ProductVersion", "6.0.23")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Shop.Domain.Entities.Category", b =>
+            modelBuilder.Entity("Shop.Domain.Entities.Department", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("DepartmentId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DepartmentId"), 1L, 1);
 
-                    b.Property<string>("CategoryName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("CategoryId");
-
-                    b.ToTable("Category", (string)null);
-                });
-
-            modelBuilder.Entity("Shop.Domain.Entities.Product", b =>
-                {
-                    b.Property<int>("ProductId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"));
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Create_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
+                    b.Property<string>("DepartmentName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("Price")
-                        .HasColumnType("bigint");
+                    b.HasKey("DepartmentId");
 
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.ToTable("Department", (string)null);
+                });
 
-                    b.Property<long>("Quantity")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("Status")
+            modelBuilder.Entity("Shop.Domain.Entities.ImageNews", b =>
+                {
+                    b.Property<int>("ImageNewsId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Update_at")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ImageNewsId"), 1L, 1);
+
+                    b.Property<string>("ImageNewsUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NewsContentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UrlApi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ImageNewsId");
+
+                    b.HasIndex("NewsContentId");
+
+                    b.ToTable("ImageNews", (string)null);
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.ImagePost", b =>
+                {
+                    b.Property<int>("ImagePostId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ImagePostId"), 1L, 1);
+
+                    b.Property<string>("ImagePostUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PostId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UrlApi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ImagePostId");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("ImagePost", (string)null);
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.News", b =>
+                {
+                    b.Property<int>("NewsId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NewsId"), 1L, 1);
+
+                    b.Property<int>("DepartmentId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("NgayDang")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("ProductId");
+                    b.Property<string>("TieuDeTinTuc")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("CategoryId");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
-                    b.ToTable("Product", (string)null);
+                    b.HasKey("NewsId");
+
+                    b.HasIndex("DepartmentId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("News", (string)null);
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.NewsContent", b =>
+                {
+                    b.Property<int>("NewsContentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NewsContentId"), 1L, 1);
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NewsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("NewsContentId");
+
+                    b.HasIndex("NewsId");
+
+                    b.ToTable("NewsContent", (string)null);
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.Notification", b =>
+                {
+                    b.Property<int>("NotificationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NotificationId"), 1L, 1);
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("NewsId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PostId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("NotificationId");
+
+                    b.HasIndex("NewsId");
+
+                    b.HasIndex("PostId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Notification", (string)null);
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.Post", b =>
+                {
+                    b.Property<int>("PostId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PostId"), 1L, 1);
+
+                    b.Property<bool?>("IsStatus")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PostContent")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("PostDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PostTittle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PostId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Post", (string)null);
                 });
 
             modelBuilder.Entity("Shop.Domain.Entities.User", b =>
@@ -88,42 +207,143 @@ namespace Shop.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
+
+                    b.Property<string>("Avatar")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Fullname")
-                        .IsRequired()
+                    b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Gender")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("UserId");
 
-                    b.ToTable("Users");
+                    b.ToTable("User", (string)null);
                 });
 
-            modelBuilder.Entity("Shop.Domain.Entities.Product", b =>
+            modelBuilder.Entity("Shop.Domain.Entities.ImageNews", b =>
                 {
-                    b.HasOne("Shop.Domain.Entities.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryId")
+                    b.HasOne("Shop.Domain.Entities.NewsContent", "NewsContent")
+                        .WithMany("imagenews")
+                        .HasForeignKey("NewsContentId")
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.Navigation("NewsContent");
                 });
 
-            modelBuilder.Entity("Shop.Domain.Entities.Category", b =>
+            modelBuilder.Entity("Shop.Domain.Entities.ImagePost", b =>
                 {
-                    b.Navigation("Products");
+                    b.HasOne("Shop.Domain.Entities.Post", "Post")
+                        .WithMany("ImagePosts")
+                        .HasForeignKey("PostId")
+                        .IsRequired();
+
+                    b.Navigation("Post");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.News", b =>
+                {
+                    b.HasOne("Shop.Domain.Entities.Department", "Department")
+                        .WithMany("News")
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Shop.Domain.Entities.User", "User")
+                        .WithMany("News")
+                        .HasForeignKey("UserId")
+                        .IsRequired();
+
+                    b.Navigation("Department");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.NewsContent", b =>
+                {
+                    b.HasOne("Shop.Domain.Entities.News", "news")
+                        .WithMany("newsContents")
+                        .HasForeignKey("NewsId")
+                        .IsRequired();
+
+                    b.Navigation("news");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.Notification", b =>
+                {
+                    b.HasOne("Shop.Domain.Entities.News", "News")
+                        .WithMany("notifications")
+                        .HasForeignKey("NewsId");
+
+                    b.HasOne("Shop.Domain.Entities.Post", "post")
+                        .WithMany("notifications")
+                        .HasForeignKey("PostId");
+
+                    b.HasOne("Shop.Domain.Entities.User", "User")
+                        .WithMany("notifications")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("News");
+
+                    b.Navigation("User");
+
+                    b.Navigation("post");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.Post", b =>
+                {
+                    b.HasOne("Shop.Domain.Entities.User", "User")
+                        .WithMany("Posts")
+                        .HasForeignKey("UserId")
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.Department", b =>
+                {
+                    b.Navigation("News");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.News", b =>
+                {
+                    b.Navigation("newsContents");
+
+                    b.Navigation("notifications");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.NewsContent", b =>
+                {
+                    b.Navigation("imagenews");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.Post", b =>
+                {
+                    b.Navigation("ImagePosts");
+
+                    b.Navigation("notifications");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.User", b =>
+                {
+                    b.Navigation("News");
+
+                    b.Navigation("Posts");
+
+                    b.Navigation("notifications");
                 });
 #pragma warning restore 612, 618
         }

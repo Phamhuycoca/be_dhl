@@ -13,7 +13,6 @@ namespace Shop.Infrastructure.Repositories
     {
         public UserRepo(ShopDbContext context) : base(context)
         {
-
         }
     }
 }

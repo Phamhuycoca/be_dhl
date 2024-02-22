@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\1a70178f-e3c6-4996-a13a-c49f5ea022a2.jpg",
+      "PackagePath": "staticwebassets\\Images\\1a70178f-e3c6-4996-a13a-c49f5ea022a2.jpg"
+    },
+    {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\32e73dc6-3dea-41bd-bc1f-c9951c311a0a.jpg",
+      "PackagePath": "staticwebassets\\Images\\32e73dc6-3dea-41bd-bc1f-c9951c311a0a.jpg"
+    },
+    {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\3ca14084-a727-44af-94ec-c8aa8c58607b.jpg",
+      "PackagePath": "staticwebassets\\Images\\3ca14084-a727-44af-94ec-c8aa8c58607b.jpg"
+    },
+    {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\5d5f28ff-47c4-4fd5-af12-4c7fae36ff40.jpg",
+      "PackagePath": "staticwebassets\\Images\\5d5f28ff-47c4-4fd5-af12-4c7fae36ff40.jpg"
+    },
+    {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\8d96413a-5798-4d5f-a0e0-350648b00226.jpg",
+      "PackagePath": "staticwebassets\\Images\\8d96413a-5798-4d5f-a0e0-350648b00226.jpg"
+    },
+    {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\9484f143-7b16-43ed-b537-edec224ba75c.jpg",
+      "PackagePath": "staticwebassets\\Images\\9484f143-7b16-43ed-b537-edec224ba75c.jpg"
+    },
+    {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\9dc5dcc4-0597-412d-80b3-a54ef64fc17c.jpg",
+      "PackagePath": "staticwebassets\\Images\\9dc5dcc4-0597-412d-80b3-a54ef64fc17c.jpg"
+    },
+    {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\a480017a-32e4-42fa-b79d-7904a669a6be.jpg",
+      "PackagePath": "staticwebassets\\Images\\a480017a-32e4-42fa-b79d-7904a669a6be.jpg"
+    },
+    {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\af8d321d-e848-4eef-89e9-9d1c7ef763a0.jpg",
+      "PackagePath": "staticwebassets\\Images\\af8d321d-e848-4eef-89e9-9d1c7ef763a0.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Shop.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Shop.Api.props",
+      "PackagePath": "build\\Shop.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Shop.Api.props",
+      "PackagePath": "buildMultiTargeting\\Shop.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Shop.Api.props",
+      "PackagePath": "buildTransitive\\Shop.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
