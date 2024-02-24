@@ -21,6 +21,8 @@ namespace Shop.Applicationn.Mapping
             CreateMap<ImagePost, ImagePostDto>().ReverseMap();
             CreateMap<Post, PostDto>().ReverseMap();
             CreateMap<Notification, NotificationDto>().ReverseMap();
+            CreateMap<CommentNews, CommentNewsDto>().ReverseMap();
+            CreateMap<CommentPost,CommentPostDto>().ReverseMap();
         }
     }
 }

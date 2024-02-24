@@ -17,6 +17,7 @@ namespace Shop.Domain.Entities
         public User? User { get; set; }
         public ICollection<ImagePost>? ImagePosts { get; set; }
         public ICollection<Notification>? notifications { get; set; }
+        public ICollection<CommentPost>? CommentPosts { get; set; }
 
     }
 }

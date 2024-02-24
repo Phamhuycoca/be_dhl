@@ -21,6 +21,8 @@ namespace Shop.Infrastructure.Modules
             services.AddScoped<IPostRepo, PostRepo>();
             services.AddScoped<IImagePostRepo, ImagePosRepo>();
             services.AddScoped<INotiRepo, NotiRepo>();
+            services.AddScoped<ICommentNewsRepo, CommentNewsRepo>();
+            services.AddScoped<ICommentPostRepo, CommentPostRepo>();
             return services;
         }    
     }

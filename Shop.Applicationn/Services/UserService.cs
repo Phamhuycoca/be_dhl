@@ -54,12 +54,19 @@ namespace Shop.Applicationn.Services
             {
                 if (file != null)
                 {
-                    string[] path = dto.Avatar.Split(url);
-                    if (!String.IsNullOrEmpty(path[1]))
+                    if(dto.Avatar==null || dto.Avatar.ToString()=="")
                     {
-                        ServiceImage.deleteImage(path[1]);
+                        dto.Avatar = url + ServiceImage.createImage(file);
                     }
-                    dto.Avatar = url + ServiceImage.createImage(file);
+                    else
+                    {
+                        string[] path = dto.Avatar.Split(url);
+                        if (!String.IsNullOrEmpty(path[1]))
+                        {
+                            ServiceImage.deleteImage(path[1]);
+                        }
+                        dto.Avatar = url + ServiceImage.createImage(file);
+                    }
                 }
                 _repo.Update(_mapper.Map<User>(dto));
                 return true;

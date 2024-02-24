@@ -35,7 +35,8 @@ namespace Shop.Api.Controllers.Account
                         Email = account.Email,
                         FullName = account.FullName,
                         Password = _md5.GetMD5(account.Password),
-                        IsAdmin = false
+                        IsAdmin = false,
+                        Avatar=""
                     };
                     if (_servcie.Create(dto))
                     {
@@ -105,6 +106,7 @@ namespace Shop.Api.Controllers.Account
                     return StatusCode(StatusCodes.Status200OK, new
                     {
                         role = check.IsAdmin,
+                        userId=check.UserId,
                         token = new JwtSecurityTokenHandler().WriteToken(token),
                         message = "Đăng nhập thành công"
                     }) ;

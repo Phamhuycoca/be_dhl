@@ -23,6 +23,8 @@ namespace Shop.Infrastructure.Context
         public DbSet<Post> Posts { get; set; }
         public DbSet<ImagePost> ImagePosts { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<CommentNews> CommentNews { get; set; }
+        public DbSet<CommentPost> CommentPosts { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Department>(e =>
@@ -72,6 +74,20 @@ namespace Shop.Infrastructure.Context
                 e.HasOne(e => e.User).WithMany(e => e.notifications).HasForeignKey(e => e.UserId).OnDelete(DeleteBehavior.ClientSetNull);
                 e.HasOne(e => e.News).WithMany(e => e.notifications).HasForeignKey(e => e.NewsId).OnDelete(DeleteBehavior.ClientSetNull);
                 e.HasOne(e => e.post).WithMany(e => e.notifications).HasForeignKey(e => e.PostId).OnDelete(DeleteBehavior.ClientSetNull);
+            });
+            modelBuilder.Entity<CommentPost>(e =>
+            {
+                e.ToTable("CommentPost");
+                e.HasKey(e => e.CommentPostId);
+                e.HasOne(e => e.Post).WithMany(e => e.CommentPosts).HasForeignKey(e => e.PostId).OnDelete(DeleteBehavior.ClientSetNull);
+                e.HasOne(e => e.User).WithMany(e => e.CommentPosts).HasForeignKey(e => e.UserId).OnDelete(DeleteBehavior.ClientSetNull);
+            });
+            modelBuilder.Entity<CommentNews>(e =>
+            {
+                e.ToTable("CommentNews");
+                e.HasKey(e => e.CommentNewsId);
+                e.HasOne(e => e.News).WithMany(e => e.CommentsNews).HasForeignKey(e => e.NewsId).OnDelete(DeleteBehavior.ClientSetNull);
+                e.HasOne(e => e.User).WithMany(e => e.CommentNews).HasForeignKey(e => e.UserId).OnDelete(DeleteBehavior.ClientSetNull);
             });
             base.OnModelCreating(modelBuilder);
         }

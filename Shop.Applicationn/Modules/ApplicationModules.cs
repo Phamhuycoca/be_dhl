@@ -31,6 +31,8 @@ namespace Shop.Applicationn.Modules
             services.AddScoped<IPostService, PostService>();
             services.AddScoped<IImagePostService, ImagePostService>();
             services.AddScoped<INotiService, NotiService>();
+            services.AddScoped<ICommentNewsService, CommentNewsService>();
+            services.AddScoped<ICommentPostService, CommentPostService>();
             return services;
         }    
     }

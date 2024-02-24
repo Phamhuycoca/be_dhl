@@ -17,5 +17,6 @@ namespace Shop.Domain.Entities
         public Department? Department { get; set; }
         public ICollection<NewsContent>? newsContents { get; set; }
         public ICollection<Notification>? notifications { get; set; }
+        public ICollection<CommentNews>? CommentsNews { get; set; }
     }
 }

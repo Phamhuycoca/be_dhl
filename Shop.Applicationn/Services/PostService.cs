@@ -4,7 +4,6 @@ using Shop.Applicationn.Dto;
 using Shop.Applicationn.IServices;
 using Shop.Domain.Entities;
 using Shop.Domain.Repositories;
-using Shop.Infrastructure.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Linq;

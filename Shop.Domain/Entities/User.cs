@@ -17,6 +17,8 @@ namespace Shop.Domain.Entities
         public bool IsAdmin { get; set; }
         public ICollection<News>? News { get; set; }
         public ICollection<Post>? Posts { get; set; }
+        public ICollection<CommentPost>? CommentPosts { get; set; }
+        public ICollection<CommentNews>? CommentNews { get; set; }
         public ICollection<Notification>? notifications { get; set; }
 
     }
