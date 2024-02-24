@@ -10,10 +10,11 @@ namespace Shop.Applicationn.IServices
     public interface INotiService 
     {
         List<NotificationDto> getAll(int id);
-        List<NotificationDto> getAll();
+        List<NotiUser> getAll();
         NotificationDto GetById(int id);
         bool Create(NotificationDto dto);
         bool Update(NotificationDto dto);
         bool Delete(int id);
+        bool SeenNoti(int id);
     }
 }

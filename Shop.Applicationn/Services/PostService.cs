@@ -166,5 +166,9 @@ namespace Shop.Applicationn.Services
             }
         }
 
+        public PostDto getById(int id)
+        {
+            return _mapper.Map<PostDto>(_repo.GetById(id));
+        }
     }
 }

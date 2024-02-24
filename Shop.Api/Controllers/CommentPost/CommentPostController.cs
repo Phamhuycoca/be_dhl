@@ -10,9 +10,13 @@ namespace Shop.Api.Controllers.CommentPost
     public class CommentPostController : ControllerBase
     {
         private readonly ICommentPostService _service;
-        public CommentPostController(ICommentPostService service)
+        private readonly INotiService _otiService;
+        private readonly IPostService _postService;
+        public CommentPostController(ICommentPostService service, INotiService otiService, IPostService postService)
         {
             _service = service;
+            _otiService = otiService;
+            _postService = postService;
         }
         [HttpGet]
         public IActionResult Index()
@@ -35,6 +39,15 @@ namespace Shop.Api.Controllers.CommentPost
                 dto.CreateComment = DateTime.Today.AddDays(1).AddHours(now.Hour).AddMinutes(now.Minute).AddSeconds(now.Second);
                 if (_service.Create(dto))
                 {
+                    NotificationDto noti = new NotificationDto()
+                    {
+                        PostId=dto.PostId,
+                        NewsId=null,
+                        UserId= _postService.GetById(dto.PostId).UserId,
+                        Status=0,
+                        UserIdComment=dto.UserId
+                    };
+                    _otiService.Create(noti);
                     return StatusCode(StatusCodes.Status200OK, "Tạo mới thông tin thành công");
                 }
                 return StatusCode(StatusCodes.Status400BadRequest, "Tạo mới không thành công");

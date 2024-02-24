@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shop.Applicationn.Dto
 {
-    public class NotificationDto
+    public class NotiUser
     {
         public int NotificationId { get; set; }
         public int? PostId { get; set; }
@@ -14,5 +14,7 @@ namespace Shop.Applicationn.Dto
         public int? UserIdComment { get; set; }
         public int? UserId { get; set; }
         public int? Status { get; set; }
+        public string? FullName { get; set; }
+        public string? Avatar { get; set; }
     }
 }

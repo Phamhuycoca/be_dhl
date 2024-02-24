@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Shop.Applicationn.Dto;
 using Shop.Applicationn.IServices;
+using Shop.Applicationn.Services;
 
 namespace Shop.Api.Controllers.CommentNews
 {
@@ -11,9 +12,13 @@ namespace Shop.Api.Controllers.CommentNews
     public class CommentNewsController : ControllerBase
     {
         private readonly ICommentNewsService _service;
-        public CommentNewsController(ICommentNewsService service)
+        private readonly INotiService _otiService;
+        private readonly INewsService _newsService;
+        public CommentNewsController(ICommentNewsService service, INotiService otiService, INewsService newsService)
         {
             _service = service;
+            _otiService = otiService;
+            _newsService = newsService;
         }
         [HttpGet]
         public IActionResult Index()
@@ -35,6 +40,15 @@ namespace Shop.Api.Controllers.CommentNews
                 dto.CreateComment = DateTime.Today.AddDays(1).AddHours(now.Hour).AddMinutes(now.Minute).AddSeconds(now.Second);
                 if (_service.Create(dto))
                 {
+                    NotificationDto noti = new NotificationDto()
+                    {
+                        NewsId = dto.NewsId,
+                        PostId = null,
+                        UserId = _newsService.GetById(dto.NewsId).UserId,
+                        Status = 0,
+                        UserIdComment = dto.UserId
+                    };
+                    _otiService.Create(noti);
                     return StatusCode(StatusCodes.Status200OK, "Tạo mới thông tin thành công");
                 }
                 return StatusCode(StatusCodes.Status400BadRequest, "Tạo mới không thành công");

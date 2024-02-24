@@ -10,7 +10,7 @@ namespace Shop.Applicationn.Dto
     {
         public int CommentNewsId { get; set; }
         public int? UserId { get; set; }
-        public int? NewsId { get; set; }
+        public int NewsId { get; set; }
         public string? CommentContent { get; set; }
         public DateTime? CreateComment { get; set; }
     }

@@ -52,6 +52,7 @@ namespace Shop.Api.Controllers.Notication
                 if (_service.GetById(id) != null)
                 {
                     dto.NotificationId = id;
+                    dto.Status = 1;
                     if (_service.Update(dto))
                     {
                         return StatusCode(StatusCodes.Status200OK, "Cập nhật thông tin thành công");
@@ -95,6 +96,25 @@ namespace Shop.Api.Controllers.Notication
             try
             {
                 return Ok(_service.getAll(id));
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                return StatusCode(StatusCodes.Status500InternalServerError, "Server Error");
+            }
+        }
+        [HttpPut("SeenNoti/{id}")]
+        public IActionResult SeenNoti(int id)
+        {
+            try
+            {
+             
+                    if (_service.SeenNoti(id))
+                    {
+                        return StatusCode(StatusCodes.Status200OK, "Cập nhật thông tin thành công");
+                    }
+                    return StatusCode(StatusCodes.Status400BadRequest, "Cập nhập không thành công");
+
             }
             catch (Exception ex)
             {

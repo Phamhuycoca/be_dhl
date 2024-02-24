@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\0f7ef41b-028b-47a4-8f98-e3d1e37a34b1.jpg",
+      "PackagePath": "staticwebassets\\Images\\0f7ef41b-028b-47a4-8f98-e3d1e37a34b1.jpg"
+    },
+    {
       "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\18e8bf7d-a434-4bf6-a4f5-c763ff6b36c3.jpg",
       "PackagePath": "staticwebassets\\Images\\18e8bf7d-a434-4bf6-a4f5-c763ff6b36c3.jpg"
     },
@@ -35,6 +39,10 @@
     {
       "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\5d5f28ff-47c4-4fd5-af12-4c7fae36ff40.jpg",
       "PackagePath": "staticwebassets\\Images\\5d5f28ff-47c4-4fd5-af12-4c7fae36ff40.jpg"
+    },
+    {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\673eb8c4-cc38-4d4b-8dde-730653c71ad5.jpg",
+      "PackagePath": "staticwebassets\\Images\\673eb8c4-cc38-4d4b-8dde-730653c71ad5.jpg"
     },
     {
       "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\8d96413a-5798-4d5f-a0e0-350648b00226.jpg",

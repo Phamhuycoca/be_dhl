@@ -11,9 +11,9 @@ namespace Shop.Domain.Entities
         public int NotificationId {  get; set; }
         public int? PostId { get; set; }
         public int? NewsId { get; set; }
-        public string? Content { get; set; }
+        public int? UserIdComment { get; set; }
+        public int? UserId{ get; set; }
         public int? Status { get; set; }
-        public int? UserId { get; set; }
         public Post? post { get; set; }
         public News? News { get; set; }
         public User? User { get; set; }

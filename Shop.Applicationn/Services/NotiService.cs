@@ -3,6 +3,7 @@ using Shop.Applicationn.Dto;
 using Shop.Applicationn.IServices;
 using Shop.Domain.Entities;
 using Shop.Domain.Repositories;
+using Shop.Infrastructure.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +16,12 @@ namespace Shop.Applicationn.Services
     {
         private readonly INotiRepo _repo;
         private readonly IMapper _mapper;
-        public NotiService(IMapper mapper, INotiRepo repo)
+        private readonly IUserRepo _userRepo;
+        public NotiService(IMapper mapper, INotiRepo repo,IUserRepo userRepo)
         {
             _mapper = mapper;
             _repo = repo;
+            _userRepo = userRepo;
         }
         public bool Create(NotificationDto dto)
         {
@@ -34,14 +37,39 @@ namespace Shop.Applicationn.Services
         {
             return _mapper.Map<List<NotificationDto>>(_repo.GetAll().Where(x=>x.UserId==id).OrderByDescending(x => x.NotificationId));
         }
-        public List<NotificationDto> getAll()
+        public List<NotiUser> getAll()
         {
-            return _mapper.Map<List<NotificationDto>>(_repo.GetAll().OrderByDescending(x => x.NotificationId));
+            var query = from noti in _repo.GetAll().Where(x=>x.Status==0).OrderByDescending(x => x.NotificationId) join
+                      user in _userRepo.GetAll() on noti.UserIdComment equals user.UserId
+                        select new NotiUser
+                        {
+                            Avatar=user.Avatar,
+                            UserId=noti.UserId,
+                            FullName=user.FullName,
+                            NewsId=noti.NewsId,
+                            PostId=noti.PostId,
+                            NotificationId=noti.NotificationId,
+                            Status=noti.Status,
+                            UserIdComment=noti.UserIdComment,
+                        };
+                      
+            return query.ToList();
         }
 
         public NotificationDto GetById(int id)
         {
             return _mapper.Map<NotificationDto>(_repo.GetById(id));
+        }
+
+        public bool SeenNoti(int id)
+        {
+            var notis = _mapper.Map<List<NotificationDto>>(_repo.GetAll().Where(x => x.UserId == id));
+            foreach (var item in notis)
+            {
+                item.Status = 1;
+                _repo.Update(_mapper.Map<Notification>(item));
+            }
+            return true;
         }
 
         public bool Update(NotificationDto dto)
