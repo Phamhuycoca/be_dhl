@@ -18,5 +18,6 @@ namespace Shop.Applicationn.IServices
         bool Update(PostDto dto, List<ImagePostDto> ImagePostDtoList, IList<IFormFile> listFile, string url);
         bool Delete(int id);
         PostDto getById(int id);
+        bool DuyetBai(PostDto dto);
     }
 }

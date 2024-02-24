@@ -9,12 +9,12 @@ namespace Shop.Applicationn.IServices
 {
     public interface INewsService
     {
-        List<NewsDto> getAll();
-        NewsDto GetById(int id);
+        List<NewsUer> getAll();
+        NewsUer GetById(int id);
         bool Create(NewsDto dto);
         bool Update(NewsDto dto);
         bool Delete(int id);
-        List<NewsDto> getAll(int id);
+        List<NewsUer> getAll(int id);
 
     }
 }

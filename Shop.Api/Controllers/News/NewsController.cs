@@ -122,5 +122,28 @@ namespace Shop.Api.Controllers.News
                 return StatusCode(StatusCodes.Status500InternalServerError, "Server Error");
             }
         }
+        [HttpGet("SearchData/{search}")]
+        public IActionResult SearchData(string search)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(search))
+                {
+                    return Ok(_service.getAll().Where(
+                        x=>x.TieuDeTinTuc.ToLower().Contains(search) ||
+                        x.FullName.ToLower().Contains(search)
+                    ));
+                }
+                else
+                {
+                    return Ok(_service.getAll());
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                return StatusCode(StatusCodes.Status500InternalServerError, "Server Error");
+            }
+        }
     }
 }

@@ -136,5 +136,25 @@ namespace Shop.Api.Controllers.Post
                 return StatusCode(StatusCodes.Status500InternalServerError, "Server Error");
             }
         }
+        [HttpPost("DuyetBai")]
+        public IActionResult DuyetBai([FromBody] IList<PostDto> list)
+        {
+            try
+            {
+                foreach (PostDto dto in list)
+                {
+                    dto.IsStatus =true;
+                    _service.DuyetBai(dto);
+                }
+                return StatusCode(StatusCodes.Status200OK, "Duyệt danh sách thông tin thành công");
+
+
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                return StatusCode(StatusCodes.Status500InternalServerError, "Server Error");
+            }
+        }
     }
 }

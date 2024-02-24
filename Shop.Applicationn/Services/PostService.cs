@@ -170,5 +170,10 @@ namespace Shop.Applicationn.Services
         {
             return _mapper.Map<PostDto>(_repo.GetById(id));
         }
+
+        public bool DuyetBai(PostDto dto)
+        {
+            return _repo.Update(_mapper.Map<Post>(dto));
+        }
     }
 }
