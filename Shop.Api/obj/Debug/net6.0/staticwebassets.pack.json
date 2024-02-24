@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\02fa741d-8b3b-48e7-bc02-7963200361e4.jpg",
+      "PackagePath": "staticwebassets\\Images\\02fa741d-8b3b-48e7-bc02-7963200361e4.jpg"
+    },
+    {
       "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\0f7ef41b-028b-47a4-8f98-e3d1e37a34b1.jpg",
       "PackagePath": "staticwebassets\\Images\\0f7ef41b-028b-47a4-8f98-e3d1e37a34b1.jpg"
     },
@@ -65,6 +69,10 @@
       "PackagePath": "staticwebassets\\Images\\a480017a-32e4-42fa-b79d-7904a669a6be.jpg"
     },
     {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\a801073f-7af5-40c1-921d-3c4f450878cd.jpg",
+      "PackagePath": "staticwebassets\\Images\\a801073f-7af5-40c1-921d-3c4f450878cd.jpg"
+    },
+    {
       "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\af8d321d-e848-4eef-89e9-9d1c7ef763a0.jpg",
       "PackagePath": "staticwebassets\\Images\\af8d321d-e848-4eef-89e9-9d1c7ef763a0.jpg"
     },
@@ -75,6 +83,10 @@
     {
       "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\e240d6d1-6aa2-4feb-8ee4-c6cd4613556e.jpg",
       "PackagePath": "staticwebassets\\Images\\e240d6d1-6aa2-4feb-8ee4-c6cd4613556e.jpg"
+    },
+    {
+      "Id": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\fcbe97f5-a322-45f4-892d-2e72d9b53140.jpg",
+      "PackagePath": "staticwebassets\\Images\\fcbe97f5-a322-45f4-892d-2e72d9b53140.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Shop.Api.Microsoft.AspNetCore.StaticWebAssets.props",

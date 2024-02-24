@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zlFbU3i7AuGwxlBK2ykhcssdRfLtNj28mmqwtF7ck44=",
+  "Hash": "s5PpS2afPVJE+cnuM9xfWrMKz0M0j0cQ9FW+TICHRCc=",
   "Source": "Shop.Api",
   "BasePath": "_content/Shop.Api",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\02fa741d-8b3b-48e7-bc02-7963200361e4.jpg",
+      "SourceId": "Shop.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\onion_architecture\\Shop.Api\\wwwroot\\",
+      "BasePath": "_content/Shop.Api",
+      "RelativePath": "Images/02fa741d-8b3b-48e7-bc02-7963200361e4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\02fa741d-8b3b-48e7-bc02-7963200361e4.jpg"
+    },
     {
       "Identity": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\0f7ef41b-028b-47a4-8f98-e3d1e37a34b1.jpg",
       "SourceId": "Shop.Api",
@@ -289,6 +306,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\a480017a-32e4-42fa-b79d-7904a669a6be.jpg"
     },
     {
+      "Identity": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\a801073f-7af5-40c1-921d-3c4f450878cd.jpg",
+      "SourceId": "Shop.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\onion_architecture\\Shop.Api\\wwwroot\\",
+      "BasePath": "_content/Shop.Api",
+      "RelativePath": "Images/a801073f-7af5-40c1-921d-3c4f450878cd.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\a801073f-7af5-40c1-921d-3c4f450878cd.jpg"
+    },
+    {
       "Identity": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\af8d321d-e848-4eef-89e9-9d1c7ef763a0.jpg",
       "SourceId": "Shop.Api",
       "SourceType": "Discovered",
@@ -338,6 +372,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\e240d6d1-6aa2-4feb-8ee4-c6cd4613556e.jpg"
+    },
+    {
+      "Identity": "F:\\onion_architecture\\Shop.Api\\wwwroot\\Images\\fcbe97f5-a322-45f4-892d-2e72d9b53140.jpg",
+      "SourceId": "Shop.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\onion_architecture\\Shop.Api\\wwwroot\\",
+      "BasePath": "_content/Shop.Api",
+      "RelativePath": "Images/fcbe97f5-a322-45f4-892d-2e72d9b53140.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\fcbe97f5-a322-45f4-892d-2e72d9b53140.jpg"
     }
   ]
 }
