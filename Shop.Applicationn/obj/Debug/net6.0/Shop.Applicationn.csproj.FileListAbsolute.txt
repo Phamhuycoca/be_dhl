@@ -49,3 +49,20 @@ F:\onion_architecture\Shop.Applicationn\bin\Debug\net6.0\Shop.Domain.pdb
 F:\onion_architecture\Shop.Applicationn\bin\Debug\net6.0\Shop.Infrastructure.pdb
 F:\onion_architecture\Shop.Applicationn\obj\Debug\net6.0\Shop.Applicationn.csproj.CopyComplete
 F:\onion_architecture\Shop.Applicationn\obj\Debug\net6.0\ref\Shop.Applicationn.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\bin\Debug\net6.0\Shop.Applicationn.deps.json
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\bin\Debug\net6.0\Shop.Applicationn.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\bin\Debug\net6.0\Shop.Applicationn.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\bin\Debug\net6.0\Shop.Domain.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\bin\Debug\net6.0\Shop.Infrastructure.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\bin\Debug\net6.0\Shop.Domain.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\bin\Debug\net6.0\Shop.Infrastructure.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\obj\Debug\net6.0\Shop.Applicationn.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\obj\Debug\net6.0\Shop.Applicationn.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\obj\Debug\net6.0\Shop.Applicationn.AssemblyInfoInputs.cache
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\obj\Debug\net6.0\Shop.Applicationn.AssemblyInfo.cs
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\obj\Debug\net6.0\Shop.Applicationn.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\obj\Debug\net6.0\Shop.Applicationn.csproj.CopyComplete
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\obj\Debug\net6.0\Shop.Applicationn.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\obj\Debug\net6.0\refint\Shop.Applicationn.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\obj\Debug\net6.0\Shop.Applicationn.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Applicationn\obj\Debug\net6.0\ref\Shop.Applicationn.dll

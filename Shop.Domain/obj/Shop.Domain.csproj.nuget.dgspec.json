@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\onion_architecture\\Shop.Domain\\Shop.Domain.csproj": {}
+    "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\GitHub\\be_dhl\\Shop.Domain\\Shop.Domain.csproj": {}
   },
   "projects": {
-    "F:\\onion_architecture\\Shop.Domain\\Shop.Domain.csproj": {
+    "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\GitHub\\be_dhl\\Shop.Domain\\Shop.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\onion_architecture\\Shop.Domain\\Shop.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\GitHub\\be_dhl\\Shop.Domain\\Shop.Domain.csproj",
         "projectName": "Shop.Domain",
-        "projectPath": "F:\\onion_architecture\\Shop.Domain\\Shop.Domain.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\GitHub\\be_dhl\\Shop.Domain\\Shop.Domain.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "F:\\onion_architecture\\Shop.Domain\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\GitHub\\be_dhl\\Shop.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

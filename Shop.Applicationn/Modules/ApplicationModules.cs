@@ -33,6 +33,7 @@ namespace Shop.Applicationn.Modules
             services.AddScoped<INotiService, NotiService>();
             services.AddScoped<ICommentNewsService, CommentNewsService>();
             services.AddScoped<ICommentPostService, CommentPostService>();
+            services.AddScoped<IEmailService, EmailService>();
             return services;
         }    
     }

@@ -49,3 +49,20 @@ F:\onion_architecture\Shop.Infrastructure\obj\Debug\net6.0\refint\Shop.Infrastru
 F:\onion_architecture\Shop.Infrastructure\obj\Debug\net6.0\Shop.Infrastructure.pdb
 F:\onion_architecture\Shop.Infrastructure\obj\Debug\net6.0\Shop.Infrastructure.genruntimeconfig.cache
 F:\onion_architecture\Shop.Infrastructure\obj\Debug\net6.0\ref\Shop.Infrastructure.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\bin\Debug\net6.0\Shop.Infrastructure.deps.json
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\bin\Debug\net6.0\Shop.Infrastructure.runtimeconfig.json
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\bin\Debug\net6.0\Shop.Infrastructure.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\bin\Debug\net6.0\Shop.Infrastructure.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\bin\Debug\net6.0\Shop.Domain.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\bin\Debug\net6.0\Shop.Domain.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\obj\Debug\net6.0\Shop.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\obj\Debug\net6.0\Shop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\obj\Debug\net6.0\Shop.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\obj\Debug\net6.0\Shop.Infrastructure.AssemblyInfo.cs
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\obj\Debug\net6.0\Shop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\obj\Debug\net6.0\Shop.Infrastructure.csproj.CopyComplete
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\obj\Debug\net6.0\Shop.Infrastructure.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\obj\Debug\net6.0\refint\Shop.Infrastructure.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\obj\Debug\net6.0\Shop.Infrastructure.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\obj\Debug\net6.0\Shop.Infrastructure.genruntimeconfig.cache
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Infrastructure\obj\Debug\net6.0\ref\Shop.Infrastructure.dll

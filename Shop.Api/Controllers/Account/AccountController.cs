@@ -16,10 +16,12 @@ namespace Shop.Api.Controllers.Account
     {
         public readonly IUserServcie _servcie;
         private readonly IConfiguration _configuration;
-        public AccountController(IUserServcie servcie, IConfiguration configuration)
+        private readonly IEmailService _emailService;
+        public AccountController(IUserServcie servcie, IConfiguration configuration, IEmailService emailService)
         {
             _servcie = servcie;
             _configuration = configuration;
+            _emailService = emailService;
         }
         [HttpPost("Register")]
         public IActionResult Register([FromBody] Account account)
@@ -162,7 +164,60 @@ namespace Shop.Api.Controllers.Account
                 return BadRequest($"Token validation failed: {ex.Message}");
             }
         }
+        [HttpPost("forgot")]
+        public IActionResult Forgot([FromBody] string email)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(email))
+                {
+                    return BadRequest("Chưa nhập thông tin");
+                }
+                else
+                {
+                    var existingUser = _servcie.getAll().FirstOrDefault(x => x.Email == email);
+                    if (existingUser != null)
+                    {
+                        RandomPassword rd = new RandomPassword();
+                        var code = rd.GenerateCode();
+                        HashMD5 md = new HashMD5();
 
+                        var dto = new UserDto()
+                        {
+                            UserId = existingUser.UserId,
+                            Password = md.GetMD5(code),
+                            Email = existingUser.Email,
+                            Avatar = existingUser.Avatar,
+                            FullName= existingUser.FullName,
+                            Gender= existingUser.Gender,
+                            IsAdmin= existingUser.IsAdmin,
+
+                        };
+
+                        var registrationResult = _servcie.ChangePassword(dto);
+
+                        if (registrationResult)
+                        {
+                            string subject = "Xác nhận quên mật khẩu tài khoản";
+                            string message = $"<p>Đây là mật khẩu mới của bạn: {code}</p>";
+
+                            _emailService.SendEmail(email, subject, message);
+
+                            return Ok("Vui lòng kiểm tra email để lấy mật khẩu mới và đăng nhập.");
+                        }
+                        else
+                        {
+                            return BadRequest("Vui lòng thử lại sau.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Đã xảy ra lỗi trong quá trình xử lý.");
+            }
+            return BadRequest("Email không tồn tại.");
+        }
     }
 
 }

@@ -33,3 +33,15 @@ F:\onion_architecture\Shop.Domain\obj\Debug\net6.0\Shop.Domain.dll
 F:\onion_architecture\Shop.Domain\obj\Debug\net6.0\refint\Shop.Domain.dll
 F:\onion_architecture\Shop.Domain\obj\Debug\net6.0\Shop.Domain.pdb
 F:\onion_architecture\Shop.Domain\obj\Debug\net6.0\ref\Shop.Domain.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\bin\Debug\net6.0\Shop.Domain.deps.json
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\bin\Debug\net6.0\Shop.Domain.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\bin\Debug\net6.0\Shop.Domain.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\obj\Debug\net6.0\Shop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfoInputs.cache
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfo.cs
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\obj\Debug\net6.0\Shop.Domain.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\obj\Debug\net6.0\refint\Shop.Domain.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\obj\Debug\net6.0\Shop.Domain.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\obj\Debug\net6.0\ref\Shop.Domain.dll
+C:\Users\ADMIN\OneDrive\Máy tính\GitHub\be_dhl\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.AssemblyReference.cache
